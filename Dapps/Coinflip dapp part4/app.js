@@ -28,7 +28,7 @@
 
     function waitForReceipt(txHash, cb){
       web3_instance.eth.getTransactionReceipt(txHash, function(err, receipt){
-        if(error{
+        if(error){
           alert(err);
         }
         else if(receipt !== null){
@@ -44,7 +44,7 @@
 
     function flip(){
       let val = parseInt($("#bet").val());
-      instance.flip.sendTransaction({from: accounts[0]], gas:100000, val}, function(error, txHash){
+      instance.flip.sendTransaction({from: accounts[0], gas:100000, val}, function(error, txHash){
         if(error){
           alert(error);
         }
